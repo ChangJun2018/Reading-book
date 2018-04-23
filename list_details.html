@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>追书神器书单详情</title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/icons-extra.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<script src="js/bookjson2.js"></script>
+		<style type="text/css">
+			.before_hide:before {
+				display: none;
+			}
+			
+			.after_hide:after {
+				display: none;
+			}
+			.mui-share {
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				height: 180px;
+				background-color: #fff;
+				padding: 10px 5px;
+				margin: 0px;
+			}
+			
+			.mui-share li {
+				float: left;
+				width: 20%;
+				text-align: center;
+			}
+			
+			.mui-share li img {
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+			
+			.mui-share li .mui-subtitle {
+				font-family: "microsoft yahei";
+			}
+			
+			.mui-share .mui-btn {
+				position: fixed;
+				bottom: 10px;
+				width: 90%;
+				left: 5%;
+				right: 5%;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: #FFF8DC;">
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#b73221; height: 50px;">
+			<div style="float: left; line-height: 50px; font-size: 18px; color: white; font-family: '微软雅黑';">
+				<a href="book_list.html" style="color: white;"><span class="mui-icon mui-icon-arrowleft"></span>&nbsp;&nbsp;&nbsp;&nbsp;书单详情</a>
+			</div>
+			<div style="float: right; line-height: 50px; width: 20%;font-size: 18px; color: white; font-family: '微软雅黑';">
+				<span id="sc">收藏</span>
+			</div>
+		</header>
+		<div class="mui-content" style="margin-top: 4px; background-color: #FFFFF0;">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media before_hide after_hide">
+					<a href="bookdetail.html">
+						<img class="mui-media-object mui-pull-left" src="images/c.jpg">
+						<div class="mui-media-body" style="font-size: 14px; color: #F0AD4E;">
+							旧梦以逝&nbsp;VIP8
+							<p class='mui-ellipsis' style="font-size: 12px;">4天前</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media before_hide after_hide">
+					<a href="bookdetail.html">
+
+						<div class="mui-media-body" style="font-size: 16px; color: #000; font-family: '微软雅黑';font-weight: bold; margin-top: -10px;">
+							青梅竹马
+							<p class='mui-ellipsis' style="font-size: 14px; margin-top: 10px; font-weight: normal;">喜欢的点击一下收藏</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media" style="margin-top: -10px;">
+					<a href="#">
+						<img class="mui-media-object mui-pull-left" src="images/c.jpg">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							<p class='mui-ellipsis' style="font-size: 14px;  font-weight: normal;">创建自&nbsp;<span style="color: #F0AD4E;">旧梦以逝</span></p>
+						</div>
+						<button id="openShare" type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+		            <span class="mui-icon-extra mui-icon-extra-share" style="font-size: 14px;"></span>
+		                     分享	
+		        </button>
+					</a>
+				</li>
+			</ul>
+			<div class="sdxq" id="html_content">
+				<ul class="mui-table-view" style="margin-top: 10px;">
+					<li class="mui-table-view-cell mui-media">
+						<a href="bookdetail.html">
+							<img class="mui-media-object mui-pull-left" src="images/top100_1.jpg">
+							<div class="mui-media-body">
+								凤回巢
+								<p class='mui-ellipsis'>寻找失落的爱情&nbsp;&nbsp;|&nbsp;&nbsp;爱情&nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #b73221;">4582</span>人气</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<ul class="mui-share mui-list-inline mui-hidden">
+            <li data-id="weixin" data-scene="WXSceneSession">
+                <img src="images/weixin.png"/>
+                <span class="mui-subtitle">微信好友</span>
+            </li>
+            <li data-id="weixin" data-scene="WXSceneTimeline">
+                <img src="images/pengyouquan.png"/>
+                <span class="mui-subtitle">朋友圈</span>
+            </li>
+            <li data-id="sinaweibo">
+                <img src="images/sinaweibo.png"/>
+                <span class="mui-subtitle">新浪微博</span>
+            </li>
+            <li data-id="tencentweibo">
+                <img src="images/tencentweibo.png"/>
+                <span class="mui-subtitle">腾讯微博</span>
+            </li>
+            <li data-id="qq">
+                <img src="images/qq.png"/>
+                <span class="mui-subtitle">qq好友</span>
+            </li>
+            <button type="button" class="mui-btn mui-btn-blue mui-btn-block" style="background: #b73221; border: 0;">取消</button>
+        </ul>
+	</body>
+	<script>
+		var result_html = "";
+		for(var i = 0; i < webapp.mantop100.length; i++) {
+			result_html += '<ul class="mui-table-view" style="margin-top: 10px;"><li class="mui-table-view-cell mui-media"><a href="bookdetail.html"><img class="mui-media-object mui-pull-left" src="' + webapp.mantop100[i].img + '.jpg"><div class="mui-media-body">' + webapp.mantop100[i].name + '<p class="mui-ellipsis">' + webapp.mantop100[i].author + '&nbsp;&nbsp;|&nbsp;&nbsp;爱情&nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #b73221;">' + webapp.mantop100[i].rq + '</span>人气</p></div></a></li></ul>'
+		}
+		html_content.innerHTML = result_html;
+	</script>
+	<script>
+		$("#sc").click(function() {
+			mui.toast("收藏成功");
+		});
+		 var shareClassName = document.querySelector('.mui-share');
+		    // 打开分享
+			document.getElementById("openShare").addEventListener('tap',function(){
+			    shareClassName.classList.remove('mui-hidden');
+			})	
+			
+			// 取消分享
+			document.querySelector('.mui-share .mui-btn').addEventListener('tap',function(){
+			    shareClassName.classList.add('mui-hidden');
+			})
+			
+			// 分享操作
+            var shares = {};
+            mui.plusReady(function () {
+                // 获取分享服务
+                plus.share.getServices(function(s) {
+                    if (s && s.length > 0) {
+                        for (var i = 0; i < s.length; i++) {
+                            var t = s[i];
+                            shares[t.id] = t;
+                        }
+                    }
+                }, function() {
+                    console.log("获取分享服务列表失败");
+                });
+            })
+			
+			/**
+			 * 监听分享点击事件
+			 */
+			mui('.mui-share').on('tap','li',function(e){
+			    var id = this.getAttribute('data-id');
+			    var scene = this.getAttribute('data-scene');
+			    console.log(id);
+			    var share = shares[id];
+			    if (share) {
+                    if (share.authenticated) {
+                        shareMessage(share, scene);
+                    } else {
+                        share.authorize(function() {
+                            shareMessage(share, scene);
+                        }, function(e) {
+                            mui.toast("认证授权失败：" + e.code + " - " + e.message);
+                        });
+                    }
+                } else {
+                    mui.toast("分享成功")
+                }
+			}) 
+
+            /**
+             * 分享发送消息
+             * @param {Object} share
+             * @param {Object} ex
+             */
+			function shareMessage(share, scene) {
+                var msg = {
+                    extra: {
+                        scene: scene
+                    }
+                };
+                msg.href = "http://www.dcloud.io/hellomui/";
+                msg.title = "最接近原生APP体验的高性能前端框架";
+                msg.content = "我正在体验HelloMUI，果然很流畅，基本看不出和原生App的差距";
+                if (~share.id.indexOf('weibo')) {
+                    msg.content += "；体验地址：http://www.dcloud.io/hellomui/";
+                }
+                msg.thumbs = ["_www/img/logo.png"];
+                share.send(msg, function() {
+                    mui.toast("分享到\"" + share.description + "\"成功！ ");
+                }, function(e) {
+                    mui.toast("分享到\"" + share.description + "\"失败: " + e.code + " - " + e.message);
+                });
+            }
+	</script>
+
+</html>

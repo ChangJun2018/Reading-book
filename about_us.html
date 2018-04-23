@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#b73221; height: 50px;">
+			<div style="float: left; line-height: 50px; font-size: 18px; color: white; font-family: '微软雅黑';">
+				<a href="find.html" style="color: white;"><span class="mui-icon mui-icon-arrowleft"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;关于我们</div>
+		</header>
+		<div class="mui-content">
+			<div class="title" style="font-size: 18px; font-family: '微软雅黑';">
+				格式化追书神器项目成员
+			</div>
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell" onclick="window.open('cj.html','_self')">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/c.jpg" style="width: 60px;" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">常峻</h4>
+									<span class="oa-contact-position mui-h6">组长</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									779199489@qq.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" onclick="window.open('lxt.html','_self')">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/lxt.jpg" style="width: 60px;" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">刘笑婷</h4>
+									<span class="oa-contact-position mui-h6">组员</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									755064135@qq.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" onclick="window.open('hlc.html','_self')">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/hlc.jpg" style="width: 60px; height: 60px;" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">胡铃晨</h4>
+									<span class="oa-contact-position mui-h6">组员</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									1220912962@qq.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		
+		</div>
+		<div class="innerCtn" style="margin-top: 20px; text-indent: 20px;">
+				<span class="mui-ellipsis-3" style="font-family: '微软雅黑'; color:#b73221;">追书神器MUI项目是由来自TIMU蜗壳工作室格式化小组的常峻、刘笑婷、胡铃晨三名成员，共同开发的一款阅读软件。本项目参考了追书神器app界面，仅实现前端页面，仅供参考学习，切勿用作商业用途。</span>
+		</div>
+		<div style="text-align: center;  padding-top:5px;color: #000000; height: 15px; font-size: 14px; margin-top: 90px; font-family: '微软雅黑';">版权所有：格式化</div>
+
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+	</script>
+	<script>
+		$(function(){//显示三行 多余隐藏 点击展开
+$('.innerCtn').click(function(){
+$(this).children(0).removeClass('mui-ellipsis-3');
+});
+}); 
+	</script>
+
+</html>

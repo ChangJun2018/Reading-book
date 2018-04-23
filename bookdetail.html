@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>追书神器首页_我的书架</title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/icons-extra.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			.sjxx {
+				list-style: none;
+				margin-top: 10px;
+				font-size: 13px;
+				font-family: "微软雅黑";
+			}
+			
+			.sjxx li {
+				float: left;
+				width: 25%;
+			}
+			
+			.sjwza {
+				color: #AAAAAA;
+			}
+			
+			.mui-share {
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				height: 180px;
+				background-color: #fff;
+				padding: 10px 5px;
+				margin: 0px;
+			}
+			
+			.mui-share li {
+				float: left;
+				width: 20%;
+				text-align: center;
+			}
+			
+			.mui-share li img {
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+			
+			.mui-share li .mui-subtitle {
+				font-family: "microsoft yahei";
+			}
+			
+			.mui-share .mui-btn {
+				position: fixed;
+				bottom: 10px;
+				width: 90%;
+				left: 5%;
+				right: 5%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#b73221; height: 50px;">
+			<div style="float: left; line-height: 50px; font-size: 18px; color: white; font-family: '微软雅黑';">
+				<a href="index.html" style="color: white;"><span class="mui-icon mui-icon-arrowleft"></span></a>
+			</div>
+			<div style="float: right; line-height: 55px; width: 35%;">
+				<a href="discuss.html"><span class="mui-icon mui-icon-chatboxes-filled" style="color: white;"><span class="mui-badge" style="margin-left: -20px; background-color:#b73221;">999+</span></span>
+				</a>
+				<a href="js/shengxu.txt" download="圣墟"><span class="mui-icon mui-icon-download" style="color: white;"></span></a>
+				<a id="openShare"><span class="mui-icon-extra mui-icon-extra-share" style="color: white;"></span></a>
+			</div>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" style="text-indent: 15px; line-height:30px;font-family: '微软雅黑';">
+						<img class=" mui-pull-left" src="images/top100_1.jpg" style="width: 27%;">
+						<!--<div style="margin-top: 10px;">
+						<span style="font-size: 18px;">圣墟</span><br />
+						<span style="color:#b73221;">&nbsp;&nbsp;&nbsp;&nbsp;辰东&nbsp;</span>&nbsp;|&nbsp;&nbsp;玄幻<br />
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;328万字</span>|20小时前<br />
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;5书币/千字</span>
+						</div>-->
+						<div class="mui-media-body">
+							圣墟
+							<p class='mui-ellipsis'><span style="color:#b73221;">辰东</span>&nbsp;&nbsp;|&nbsp;&nbsp;玄幻</p>
+							<p class='mui-ellipsis'>328万字&nbsp;&nbsp;|&nbsp;&nbsp;20小时前</p>
+							<p class='mui-ellipsis'>5书币/千字</p>
+						</div>
+
+						<img class=" mui-pull-left" src="images/pf4.png" style="width: 20%; float: right; position: absolute;top:20px;right: 10px;">
+						<div class="mui-clearfix"></div>
+					</a>
+					<ul class="sjxx">
+						<li class="sjwza">追书人气</li>
+						<li class="sjwza">读者留存</li>
+						<li class="sjwza">社区帖子</li>
+						<li class="sjwza">日更新字</li>
+						<li>303020</li>
+						<li>73.89%</li>
+						<li>56009</li>
+						<li>7749</li>
+					</ul>
+				</li>
+
+			</ul>
+			<div class="sjjj" style="background: #FFFFFF;padding: 10px; font-family: '微软雅黑'; font-size: 16px; border-bottom: 1px solid #ddd;"><span class="mui-icon mui-icon-paperplane" style="color: #b73221;"></span>&nbsp;&nbsp;简介
+				<p class='mui-ellipsis' style="text-indent: 10px; margin-top: 5px;">在破败中崛起，在寂灭中复苏。沧海成尘，雷电枯竭，<br/>那一缕幽雾又一次临近大地，世间的枷锁被打开了，一<br/>个全新的世界就此揭开神秘的一角……</p>
+			</div>
+			<div class="sjjj" style="background: #FFFFFF;padding: 10px; font-family: '微软雅黑'; font-size: 16px; border-bottom: 1px solid #ddd;"><span class="mui-icon mui-icon-paperplane" style="color: #b73221;"></span>&nbsp;&nbsp;标签<br />
+				<button type="button" style="margin-top: 10px; margin-left: 10px;">玄幻</button>
+				<button type="button" style="margin-top: 10px; margin-left: 10px;">东方玄幻</button>
+			</div>
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="sjjj" style="background: #FFFFFF;font-family: '微软雅黑'; font-size: 16px; margin-bottom: 5px;"><span class="mui-icon mui-icon-paperplane" style="color: #b73221;"></span>&nbsp;&nbsp;热门短评</div>
+					<div class="mui-table">
+						<img class="mui-media-object" src="images/c.jpg" style="position: absolute; top: 45px;">
+						<div class="mui-table-cell mui-col-xs-10">
+							<h4 class="mui-ellipsis" style=" text-indent: 60px;">ChangJun@China</h4>
+							<h5 style=" text-indent: 60px;"><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -60px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px;"></span></h5>
+							<p class="mui-h6" style=" text-indent: 60px;">小说写的特别好看，人物，情节，不夸张，脑洞大开想象力够丰富，情节细腻，人物的个性刻画非常到位，必须推荐给大家看。</p>
+						</div>
+						<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+							<span class="mui-h5">12:25</span>
+						</div>
+					</div>
+					<div style="text-align: center; margin-top: 5px; color: #b73221;">全部短评9147</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="sjjj" style="background: #FFFFFF;font-family: '微软雅黑'; font-size: 16px; margin-bottom: 5px;"><span class="mui-icon mui-icon-paperplane" style="color: #b73221;"></span>&nbsp;&nbsp;热门书评</div>
+					<div class="mui-table">
+						<img class="mui-media-object" src="images/c.jpg" style="position: absolute; top: 45px;">
+						<div class="mui-table-cell mui-col-xs-10">
+							<h4 class="mui-ellipsis" style=" text-indent: 60px;">ChangJun@China</h4>
+							<h5 style=" text-indent: 60px;"><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -60px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px; color: #b73221;"></span><span class="mui-icon-extra mui-icon-extra-heart-filled" style="margin-left: -50px; font-size: 14px;"></span></h5>
+							<p class="mui-h6" style=" text-indent: 60px;">看完遮天，怜惜里面的安妙衣，疼惜姬紫月，报悍终生的秦瑶！！希望这部不会有这么多遗憾！ 希望真正的完美世界！</p>
+						</div>
+						<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+							<span class="mui-h5">12:25</span>
+						</div>
+
+					</div>
+					<div style="text-align: center; margin-top: 5px; color: #b73221;">全部短评9147</div>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-grid-view" style="border-bottom: 1px solid #AAAAAA;">
+				<div class="sjjj" style="background: #FFFFFF;font-family: '微软雅黑'; font-size: 16px; text-indent: 6px; padding-top: 10px; "><span class="mui-icon mui-icon-paperplane" style="color: #b73221;"></span>&nbsp;&nbsp;你可能会喜欢</div>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="#">
+						<img class="mui-media-object" src="images/top100_11.jpg">
+						<div class="mui-media-body">万古神帝</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="#">
+						<img class="mui-media-object" src="images/top100_13.jpg">
+						<div class="mui-media-body">全职法师</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="#"><img class="mui-media-object" src="images/top100_16.jpg">
+						<div class="mui-media-body">我的姐姐是大明星</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="#">
+						<img class="mui-media-object" src="images/top100_18.jpg">
+						<div class="mui-media-body">永夜君王</div>
+					</a>
+				</li>
+				<div style="text-align: center; margin-top: 5px; color: #b73221;">全部短评9147</div>
+			</ul>
+		</div>
+		<div style="text-align: center;  padding-top:5px;color: #b73221; background-color: white; height: 20px;">版权所有：格式化</div>
+		 <ul class="mui-share mui-list-inline mui-hidden">
+            <li data-id="weixin" data-scene="WXSceneSession">
+                <img src="images/weixin.png"/>
+                <span class="mui-subtitle">微信好友</span>
+            </li>
+            <li data-id="weixin" data-scene="WXSceneTimeline">
+                <img src="images/pengyouquan.png"/>
+                <span class="mui-subtitle">朋友圈</span>
+            </li>
+            <li data-id="sinaweibo">
+                <img src="images/sinaweibo.png"/>
+                <span class="mui-subtitle">新浪微博</span>
+            </li>
+            <li data-id="tencentweibo">
+                <img src="images/tencentweibo.png"/>
+                <span class="mui-subtitle">腾讯微博</span>
+            </li>
+            <li data-id="qq">
+                <img src="images/qq.png"/>
+                <span class="mui-subtitle">qq好友</span>
+            </li>
+            <button type="button" class="mui-btn mui-btn-blue mui-btn-block" style="background: #b73221; border: 0;">取消</button>
+        </ul>
+	</body>
+	<script>
+		 var shareClassName = document.querySelector('.mui-share');
+		    // 打开分享
+			document.getElementById("openShare").addEventListener('tap',function(){
+			    shareClassName.classList.remove('mui-hidden');
+			})	
+			
+			// 取消分享
+			document.querySelector('.mui-share .mui-btn').addEventListener('tap',function(){
+			    shareClassName.classList.add('mui-hidden');
+			})
+			
+			// 分享操作
+            var shares = {};
+            mui.plusReady(function () {
+                // 获取分享服务
+                plus.share.getServices(function(s) {
+                    if (s && s.length > 0) {
+                        for (var i = 0; i < s.length; i++) {
+                            var t = s[i];
+                            shares[t.id] = t;
+                        }
+                    }
+                }, function() {
+                    console.log("获取分享服务列表失败");
+                });
+            })
+			
+			/**
+			 * 监听分享点击事件
+			 */
+			mui('.mui-share').on('tap','li',function(e){
+			    var id = this.getAttribute('data-id');
+			    var scene = this.getAttribute('data-scene');
+			    console.log(id);
+			    var share = shares[id];
+			    if (share) {
+                    if (share.authenticated) {
+                        shareMessage(share, scene);
+                    } else {
+                        share.authorize(function() {
+                            shareMessage(share, scene);
+                        }, function(e) {
+                            mui.toast("认证授权失败：" + e.code + " - " + e.message);
+                        });
+                    }
+                } else {
+                    mui.toast("分享成功")
+                }
+			}) 
+
+            /**
+             * 分享发送消息
+             * @param {Object} share
+             * @param {Object} ex
+             */
+			function shareMessage(share, scene) {
+                var msg = {
+                    extra: {
+                        scene: scene
+                    }
+                };
+                msg.href = "http://www.dcloud.io/hellomui/";
+                msg.title = "最接近原生APP体验的高性能前端框架";
+                msg.content = "我正在体验HelloMUI，果然很流畅，基本看不出和原生App的差距";
+                if (~share.id.indexOf('weibo')) {
+                    msg.content += "；体验地址：http://www.dcloud.io/hellomui/";
+                }
+                msg.thumbs = ["_www/img/logo.png"];
+                share.send(msg, function() {
+                    mui.toast("分享到\"" + share.description + "\"成功！ ");
+                }, function(e) {
+                    mui.toast("分享到\"" + share.description + "\"失败: " + e.code + " - " + e.message);
+                });
+            }
+	</script>
+</html>

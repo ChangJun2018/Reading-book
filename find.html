@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>追书神器_发现</title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style type="text/css">
+			.nav_wz {
+				list-style: none;
+				width: 100%;
+			}
+			
+			.nav_wz li {
+				float: left;
+				width: 25%;
+				line-height: 45px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #b73221; height: 50px;">
+			<div style="line-height: 50px;font-size: 18px; color: white; float: left; margin-left: 10px;">发现</div>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="charts.html">
+						<img class="mui-media-object mui-pull-left" src="images/PHB.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							排行榜
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px; color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="book_list.html">
+						<img class="mui-media-object mui-pull-left" src="images/ZTSD.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							主题书单
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="sort.html">
+						<img class="mui-media-object mui-pull-left" src="images/FL.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							分类
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="sort.html">
+						<img class="mui-media-object mui-pull-left" src="images/YSXS.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							有声小说
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" id="smgn">
+						<img class="mui-media-object mui-pull-left" src="images/SMGN.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							神秘功能
+						</div>
+						<span class="mui-icon mui-icon-locked" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" id="mhzx">
+						<img class="mui-media-object mui-pull-left" src="images/MHZX.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							漫画中心
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" id="yxzx">
+						<img class="mui-media-object mui-pull-left" src="images/YXZX.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							游戏中心
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;" id="ylzx">
+						<img class="mui-media-object mui-pull-left" src="images/YLZX.png">
+						<div class="mui-media-body" style="line-height:45px; text-indent: 15px; float: left; font-family: '微软雅黑'">
+							娱乐中心
+						</div>
+						<span class="mui-icon mui-icon-arrowright" style="float:right;line-height:45px;color: #ACACB4;"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mui-clearfix"></div>
+		<div class="aaaaa" style="height: 60px;"></div>
+		<nav class="mui-bar mui-bar-tab " id="nav">  
+            <a class="mui-tab-item" id="a1"  onclick="window.open('index.html', '_self')">  
+                <span class="mui-icon mui-icon-map"></span>  
+                <span class="mui-tab-label">书架</span>  
+            </a>  
+            <a class="mui-tab-item " id="a2" href="community.html" onclick="window.open('community.html', '_self')">  
+                <span class="mui-icon mui-icon-pengyouquan"><span class="mui-badge">99</span></span>  
+                <span class="mui-tab-label">社区</span>  
+            </a>  
+            <a class="mui-tab-item " id="a3" href="find.html" style="color:#b73221" onclick="window.open('find.html', '_self')">  
+                <span class="mui-icon mui-icon-navigate"><span class="mui-badge">9</span></span>  
+                <span class="mui-tab-label">发现</span>  
+            </a>
+            <a class="mui-tab-item " id="a3" href="my.html" onclick="window.open('my.html', '_self')">  
+                <span class="mui-icon mui-icon-contact"><span class="mui-badge">1</span></span>  
+                <span class="mui-tab-label">我的</span>  
+            </a>  
+        </nav>  
+	</body>
+	<script>
+		$("#smgn").click(function() {
+			mui.toast("前方高能，神秘功能待开发中");
+		});
+		$("#mhzx").click(function() {
+			mui.toast("请先下载漫画app");
+		});
+		$("#yxzx").click(function() {
+			mui.toast("此功能待开发");
+		});
+		$("#ylzx").click(function() {
+			mui.toast("此功能待开发");
+		});
+	</script>
+</html>

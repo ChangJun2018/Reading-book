@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>追书神器设置</title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/icons-extra.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#b73221; height: 50px;">
+			<div style="float: left; line-height: 50px; font-size: 18px; color: white; font-family: '微软雅黑';">
+				<a href="index.html" style="color: white;"><span class="mui-icon mui-icon-arrowleft"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;设置</div>
+		</header>
+		<div class="mui-content">
+			<div class="title" style="font-size: 16px; font-family: '微软雅黑'; text-indent: 15px; margin-top: 10PX; margin-bottom: 5px; color: #ACACB4;">
+				设置
+			</div>
+			<div class="mui-card">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						书架排序
+						<button type="button" class="mui-btn" style="border: 0; color: #999999;">
+							按最近阅读
+						</button>
+					</li>
+					<li class="mui-table-view-cell">
+						更新通知
+						<div class="mui-switch mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						省流量模式（无头像）
+						<div class="mui-switch">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="title" style="font-size: 16px; font-family: '微软雅黑'; text-indent: 15px; margin-top: 10PX; margin-bottom: 5px; color: #ACACB4;">
+				更多
+			</div>
+			<div class="mui-card">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						免责声明
+					</li>
+					<li class="mui-table-view-cell" onclick="window.open('black_index.html','_self')">
+						夜间模式
+					</li>
+					<li class="mui-table-view-cell" onclick="window.open('single_chat.html','_self')">
+						意见反馈
+					</li>
+					<li class="mui-table-view-cell" onclick="window.open('about_us.html','_self')">
+						关于我们
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
